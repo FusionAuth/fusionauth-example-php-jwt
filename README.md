@@ -1,6 +1,6 @@
 # PHP JWT Examples
 
-This code uses the PHP Firebase JWT gem: https://github.com/firebase/php-jwt and runs through a couple of different scenarios.
+This code uses the PHP Firebase JWT library: https://github.com/firebase/php-jwt and runs through a couple of different scenarios.
 
 * building a JWT with the 'hmac' algorithm
 * building a JWT with the 'rsa' algorithm
@@ -9,7 +9,7 @@ This code uses the PHP Firebase JWT gem: https://github.com/firebase/php-jwt and
 
 ## To install
 
-This assumes you have composer installed. If not, [get it](https://getcomposer.org/doc/00-intro.md)
+This assumes you have composer installed. If not, [get it here](https://getcomposer.org/doc/00-intro.md).
 
 `composer install`
 
@@ -20,5 +20,3 @@ This assumes you have composer installed. If not, [get it](https://getcomposer.o
 Tested on php 7.3.24.
 
 JWTs originally built by [FusionAuth](http://fusionauth.io).
-
-
