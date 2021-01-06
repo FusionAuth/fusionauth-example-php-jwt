@@ -17,7 +17,7 @@ This assumes you have composer installed. If not, [get it](https://getcomposer.o
 
 ## Environment
 
-Tested on ruby 7.3.24.
+Tested on php 7.3.24.
 
 JWTs originally built by [FusionAuth](http://fusionauth.io).
 
