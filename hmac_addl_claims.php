@@ -8,7 +8,7 @@ $key = "hello php-folk!!";
 // User API
 $exp = time() + (60*5);
 $payload = array(
-    "iss" => "hacked.fusionauth.io", 
+    "iss" => "fusionauth.io", 
     "exp" => $exp, 
     "aud" => "238d4793-70de-4183-9707-48ed8ecd19d9",
     "sub" => "19016b73-3ffa-4b26-80d8-aa9287738677",
