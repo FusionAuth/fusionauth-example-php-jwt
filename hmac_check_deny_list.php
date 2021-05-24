@@ -36,8 +36,9 @@ if ($expected_iss != $decoded->iss) {
 if ($expected_aud != $decoded->aud) {
   throw new UnexpectedValueException('Audience incorrect');
 }
+$val = array_search($decoded->jti, $revoked_jwts,true);
 
-if (!$revoked_jwts.array_search($decoded->jti, $revoked_jwts,true)) {
+if (array_search($decoded->jti, $revoked_jwts,true) !== false) {
   throw new UnexpectedValueException('JWT revoked');
 }
 
