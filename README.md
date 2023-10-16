@@ -17,6 +17,6 @@ This assumes you have composer installed. If not, [get it here](https://getcompo
 
 ## Environment
 
-Tested on php 7.3.24.
+Tested on php 8.2.8.
 
 JWTs originally built by [FusionAuth](http://fusionauth.io).
