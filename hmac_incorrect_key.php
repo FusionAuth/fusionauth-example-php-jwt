@@ -2,6 +2,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 use \Firebase\JWT\JWT;
+use \Firebase\JWT\Key;
 
 $key = "hello php-folk!!";
 
@@ -16,13 +17,13 @@ $payload = array(
     "roles" => ["RETRIEVE_TODOS"]
 );
 
-$jwt = JWT::encode($payload, $key);
+$jwt = JWT::encode($payload, $key, 'HS256');
 print($jwt);
 print("\n\n");
 
 // Todo API
 $key = "bye php-folk!!";
-$decoded = JWT::decode($jwt, $key, array('HS256'));
+$decoded = JWT::decode($jwt, new Key($key, 'HS256'));
 
 print_r($decoded);
 

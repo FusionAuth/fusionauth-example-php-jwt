@@ -2,6 +2,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 use \Firebase\JWT\JWT;
+use \Firebase\JWT\Key;
 
 $key = "hello php-folk!!";
 
@@ -17,12 +18,12 @@ $payload = array(
     "roles" => ["RETRIEVE_TODOS"]
 );
 
-$jwt = JWT::encode($payload, $key);
+$jwt = JWT::encode($payload, $key, 'HS256');
 print($jwt);
 print("\n\n");
 
 // Todo API
-$decoded = JWT::decode($jwt, $key, array('HS256'));
+$decoded = JWT::decode($jwt, new Key($key, 'HS256'));
 
 $revoked_jwts = array(); //implementation of this tbd
 
@@ -36,7 +37,7 @@ if ($expected_iss != $decoded->iss) {
 if ($expected_aud != $decoded->aud) {
   throw new UnexpectedValueException('Audience incorrect');
 }
-$val = array_search($decoded->jti, $revoked_jwts,true);
+$val = array_search($decoded->jti, $revoked_jwts, true);
 
 if (array_search($decoded->jti, $revoked_jwts,true) !== false) {
   throw new UnexpectedValueException('JWT revoked');

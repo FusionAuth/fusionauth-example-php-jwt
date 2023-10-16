@@ -2,6 +2,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 use \Firebase\JWT\JWT;
+use \Firebase\JWT\Key;
 
 $privateKey = <<<EOD
 -----BEGIN RSA PRIVATE KEY-----
@@ -46,7 +47,7 @@ print($jwt);
 print("\n\n");
 
 // Todo API
-$decoded = JWT::decode($jwt, $publicKey, array('RS256'));
+$decoded = JWT::decode($jwt, new Key($publicKey, 'RS256'));
 
 print_r($decoded);
 
