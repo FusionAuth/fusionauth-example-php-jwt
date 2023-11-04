@@ -36,6 +36,7 @@ if ($expected_aud != $decoded->aud) {
   throw new UnexpectedValueException('Audience incorrect');
 }
 
+// use this
 print_r($decoded);
 
 ?>
