@@ -25,7 +25,9 @@ print("\n\n");
 // Todo API
 $decoded = JWT::decode($jwt, new Key($key, 'HS256'));
 
-$revoked_jwts = array(); //implementation of this tbd
+$revoked_jwts = array(
+'45616c74-2aaa-4b26-da28-9287738677aa'
+); //implementation of this tbd
 
 $expected_iss = "fusionauth.io";
 $expected_aud = "238d4793-70de-4183-9707-48ed8ecd19d9";
